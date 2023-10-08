@@ -1,0 +1,13 @@
+Fiquei com preguiça de criar um Makefile
+
+--------------------PWD--------------------------------------------------------------------------------------------------------------------------
+
+comando para compilar os testes do pwd = gcc -o run_pwd_test example_functions/pwd.c test_cases/pwd/teste_pwd.c test_cases/pwd/main.c
+
+compilador              = gcc
+saída                   = -o run_pwd_test 
+arquivos necessários    = example_functions/pwd.c test_cases/pwd/teste_pwd.c
+arquivo principal       = test_cases/pwd/main.c
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
