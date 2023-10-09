@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   age.c                                              :+:      :+:    :+:   */
+/*   schrodinger.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafade-o <rafade-o@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,47 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdarg.h>
-#include <stdio.h>
-#include <string.h>
+#ifndef SCHRODINGER_H
 
-int	age(const char *action, int initialize, ...)
-{
-	static int	internal_age;
-	va_list		args;
+# define SCHRODINGER_H
 
-	if (initialize)
-		internal_age = 0;
-	va_start(args, initialize);
-	if (strcmp(action, "get") == 0)
-	{
-		va_end(args);
-		return (internal_age);
-	}
-	else if (strcmp(action, "set") == 0)
-	{
-		va_end(args);
-		internal_age = va_arg(args, int);
-	}
-	return (0);
-}
+# include <stdarg.h>
+# include <stdio.h>
+# include <string.h>
+# include <unistd.h>
 
-int	get_age(void)
-{
-	return (age("get", 0));
-}
+int     get_age(void);
+void	set_age(int new_age);
 
-void	set_age(int new_age)
-{
-	age("set", 1, new_age);
-}
-
-int	main(void)
-{
-	int	id;
-
-	id = 30;
-	set_age(id);
-	printf("the age is: %d\n", get_age());
-	return (0);
-}
+#endif

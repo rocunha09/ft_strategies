@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   variatic.c                                         :+:      :+:    :+:   */
+/*   normal_age.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafade-o <rafade-o@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,48 +10,35 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdarg.h>
-#include <stdio.h>
-#include <string.h>
-#include <unistd.h>
+#include "schrodinger.h"
 
-int	age(const char *action, int initialize, ...)
+/**
+ * A função age é declarada como static, portanto ela só pode ser acessada
+ * dentro do arquivo age.c.
+ * desta forma cria-se encapsulamento e somente as funções get_age e set_age
+ * podem acessar a variável internal_age e alterá-la.
+*/
+static void	age(const char *action, int initialize, int *value, int new_value)
 {
 	static int	internal_age;
-	va_list		args;
 
 	if (initialize)
 		internal_age = 0;
-	va_start(args, initialize);
 	if (strcmp(action, "get") == 0)
-	{
-		va_end(args);
-		return (internal_age);
-	}
+		*value = internal_age;
 	else if (strcmp(action, "set") == 0)
-	{
-		va_end(args);
-		internal_age = va_arg(args, int);
-	}
-	return (0);
+		internal_age = new_value;
 }
 
 int	get_age(void)
 {
-	return (age("get", 0));
+	int	ptr;
+
+	age("get", 0, &ptr, 0);
+	return (ptr);
 }
 
 void	set_age(int new_age)
 {
-	age("set", 1, new_age);
-}
-
-int	main(void)
-{
-	int	id;
-
-	id = 40;
-	set_age(id);
-	printf("A age é: %d\n", get_age());
-	return (0);
+	age("set", 1, 0, new_age);
 }
