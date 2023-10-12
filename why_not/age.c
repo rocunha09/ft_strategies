@@ -15,7 +15,6 @@ static t_age *new_age(int age, const char *name, const char *describe)
     new_age->age = age;
     new_age->metadata->name = strdup(name);
     new_age->metadata->describe = strdup(describe);
-
     return (new_age);
 }
 
