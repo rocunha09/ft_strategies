@@ -6,7 +6,6 @@
 */
 static t_age *new_age(int age, const char *name, const char *describe)
 {
-    // Aloca memória para a estrutura t_age
     t_age *new_age;
 	
 	new_age = (t_age *)malloc(sizeof(t_age));
