@@ -36,6 +36,14 @@ A utilização de testes unitários pode trazer ótimos resultados em seus proje
 
 **Nesta sessão encontrará ideias diversas, desde exemplos de testes de unidade, cores, lista de casos de teste, entre outras coisas, aproveite e tenha novas ideias!**
 
+Obs.: Fiquei com preguiça de criar um Makefile...
+
+comando para compilar os testes do pwd:
+```shell
+gcc -o run_pwd_test example_functions/pwd.c test_cases/pwd/teste_pwd.c test_cases/pwd/main.c
+```
+
+
 ## Why Not?!
 
 ### um exemplo de Overengineering em caso de uso manual, maass uma boa combinação de um possível package manager poderia potencializar a construção de  projetos e isso seria divertido.
