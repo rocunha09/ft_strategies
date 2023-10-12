@@ -36,3 +36,26 @@ A utilização de testes unitários pode trazer ótimos resultados em seus proje
 
 **Nesta sessão encontrará ideias diversas, desde exemplos de testes de unidade, cores, lista de casos de teste, entre outras coisas, aproveite e tenha novas ideias!**
 
+## Why Not?!
+
+### um exemplo de Overengineering em caso de uso manual, maass uma boa combinação de um possível package manager poderia potencializar a construção de  projetos e isso seria divertido.
+
+Um misto de Singleton-Like Pattern com Encapsulamento, padrões de nomeclatura, identidade de domínios bem definida, Rich Data Types "Tipos de dados que ricos em informação, ou que se autodescrevem", seja por qual ponto de vista você olhar haverá uma pequena referência de padrões de projetos, orientação a objetos, controle de memória, um verdeiro "Frankenstein Monster" com tantas referências que o constróem.
+
+### O PORÉM!
+
+Imagine que ao iniciar seu projeto possa utilizar-se de um possível "packege manager" para criação do template base, importação de bibliotecas ou até mesmo criação de tipos (como o o exemplificado aqui), de forma a não se preocupar com gerenciamento de memória ou declaração de variáveis ligadas ao contexto geral da aplicação, apenas utilizá-las com seus getters e setters, why not?
+
+First:
+```shell
+gcc -g -o test_age c_cleaner.c age.c main.c 
+``````
+
+and run:
+```shell
+valgrind ./test_age 
+``````
+
+ - What is "Valgrind"?
+    R: Your best Friend!
+
