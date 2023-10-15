@@ -1,6 +1,20 @@
 
 # ft_techniques_and_strategies
 
+```C
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_techniques_and_strategies.c                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rafade-o <rafade-o@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/07 01:53:29 by rafade-o          #+#    #+#             */
+/*   Updated: 2023/10/15 20:10:18 by rafade-o         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+```
+
 ## Joke_Schrodinger
 
 ### A implementação apresentada se assemelha com alguns padrões e sua origem se dá a restrição de ambiente causada pela Norma de codificação.
@@ -21,12 +35,25 @@ Precisa usar uma variável global? e só é permitido ter uma (ou nenhuma)? e el
 
 O Strategy Pattern é um padrão comportamental que permite definir uma família de algoritmos, encapsulá-los e torná-los intercambiáveis. Cada algoritmo é encapsulado em um objeto separado (a estratégia), e o contexto que usa essas estratégias pode escolher qual estratégia usar em tempo de execução. Essencialmente, o Strategy Pattern permite que você altere o comportamento de um objeto sem alterar sua estrutura.
 
+O conceito a ser demonstrado aqui está diretamente ligado a duas funções: add_operation e exec_operation.
+
+Podem ser construídas diversas operações e o que será necessário é adicioná-las com add_operation e desta forma o motor da aplicação não precisará ser alterado com mais condicionais "else if" para seleção de uso de novas operações pois exec_operation suportará todas as que forem acrescidas, sem limites e sem alterações.
+
+Obs.: lembrando que o pattern apresentado acima foi utilizado de inspiração apra a construção deste modelo, além disso pode-se criar de outras formas esta estratégia.
+Obs².: Junte os conceitos expressos aqui com structs compostas de union para seleção de tipos de dados ou generics e terá um motor mais eficiente pois a passagem de params não será restrita a apenas inteiros(como no exemplo abordado aqui).
+
+comando para compilar o strategy:
+```shell
+gcc -o calc operations.c add_and_use_operation.c main_strategy.c
+```
 
 ## Generic
 
 ### A implementação apreentada tem o objetivo de dar flexibilidade e reúso para as funcionalidades construídas mais comuns em uma aplicação.
 
 A utilização de void * em C para simular um tipo genérico visa criar componentes e algoritmos que funcionem com diversos tipos de dados, promovendo a reutilização do código e flexibilidade. No entanto, é importante observar que essa abordagem em C carece das verificações de tipo em tempo de compilação e da segurança que as linguagens com suporte nativo a tipos genéricos proporcionam.
+
+Obs.: esboço básico, semente da ideia implementada.
 
 ## Test, A LOT! 
 
