@@ -15,6 +15,18 @@
 /* ************************************************************************** */
 ```
 
+---
+
+💡 Saiba mais
+
+Para mais conteúdo técnico, Pesquisa e desenvolvimento, práticas, leitura imersiva e didática sobre tecnologia e computação acesse meu site:
+
+🔗 [rafael-o-cunha.dev](https://rafael-o-cunha.dev/)
+
+---
+
+
+
 ## Joke_Schrodinger
 
 ### A implementação apresentada se assemelha com alguns padrões e sua origem se dá a restrição de ambiente causada pela Norma de codificação.
